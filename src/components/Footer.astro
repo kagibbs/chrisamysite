@@ -1,0 +1,65 @@
+---
+import { Icon } from "astro-icon";
+
+const { "aria-label": ariaLabel, id } = Astro.props;
+
+const href = `#${id}`;
+---
+
+<style>
+    footer {
+        background-color: #f5f5f5;
+        position: relative;
+    }
+
+    footer .footerImg {
+        padding: 80px 0;
+    }
+
+    .backToTop {
+        display: block;
+        text-transform: uppercase;
+        background-color: #dae2e7;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin: 0 auto -25px auto;
+        z-index: 15;
+        position: relative;
+        top: -25px;
+        text-align: center;
+        color: #467ca4;
+        font-weight: 600;
+        font-size: 0.9em;
+        letter-spacing: 0.1em;
+        text-align: center;
+        padding: 2px 11.5px;
+    }
+
+    .backToTop [astro-icon] {
+        height: 1.3em;
+        margin: 0 auto;
+    }
+</style>
+
+<footer class="footer">
+    <a class="backToTop" aria-label={ariaLabel} href="#top">
+        <Icon name="bi:chevron-up" />
+        <small>Top</small>
+    </a>
+    <div class="container max-w-screen-lg mx-auto">
+        <div class="footerImg">
+            <img src="/src/images/footer_banner.png" alt="Chris and Amy say I Do on September 9th 2017 in Glen Spey New York" />
+        </div>
+    </div>
+</footer>
+
+<script>
+    const buttons = document.querySelectorAll(".backToTop");
+
+    buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+            window.scrollTo(0, 0);
+        });
+    });
+</script>

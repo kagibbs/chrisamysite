@@ -1,0 +1,147 @@
+---
+import { Icon } from "astro-icon";
+
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
+---
+
+<style>
+    header {
+        position: fixed !important;
+        background-color: rgba(186, 209, 222, 0.95);
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+    }
+
+    .headerContainer {
+        display: flex;
+        padding: 5px 20px;
+        justify-content: space-between;
+    }
+
+    .logo img {
+        height: 65px;
+        padding: 5px;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+    }
+
+    nav {
+        position: absolute;
+        top: 75px;
+        left: 0;
+        right: 0;
+        background-color: rgba(186, 209, 222, 0.95);
+        justify-content: center;
+    }
+
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin-right: 0;
+        padding: 15px;
+    }
+
+    nav ul li:last-child {
+        margin-right: 0;
+    }
+
+    nav ul li a {
+        color: #7a9ba8;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.73em;
+        letter-spacing: 0.2em;
+    }
+
+    nav ul li a.active {
+        color: #d67d97;
+    }
+    nav ul li a:hover {
+        color: rgba(122, 155, 168, 0.7);
+    }
+
+    #myLinks {
+        display: none;
+    }
+
+    a.icon {
+        width: 24px;
+        display: flex;
+        align-items: center;
+        color: rgba(122, 155, 168, 0.7);
+        transition: background-color 170ms ease-in-out;
+    }
+    a.icon:hover {
+        color: #356ea2;
+        cursor: pointer;
+    }
+
+    @media (min-width: 550px) {
+        nav {
+            position: static;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 30px;
+            text-transform: uppercase;
+            padding: 0;
+            text-align: left;
+        }
+        a.icon {
+            display: none;
+        }
+
+        #myLinks {
+            display: block;
+        }
+    }
+</style>
+
+<header class="header">
+    <div class="headerContainer">
+        <div class="logo">
+            <a href="/">
+                <img src="/src/images/logo.png" alt="Chris and Amy say I Do" />
+            </a>
+        </div>
+        <nav>
+            <ul id="myLinks">
+                <li><a class={currentPath === "tale" ? "active" : ""} href="/tale">Tale of the Tape</a></li>
+                <li><a class={currentPath === "event" ? "active" : ""} href="/event">The Main Event</a></li>
+                <li><a class={currentPath === "afterthebell" ? "active" : ""} href="/afterthebell">After the Bell</a></li>
+                <li><a class={currentPath === "accommodations" ? "active" : ""} href="/accommodations">Accomodations</a></li>
+                <!-- <li><a class={currentPath === "rsvp" ? "active" : ""} href="/rsvp">RSVP</a></li> -->
+            </ul>
+        </nav>
+        <a class="icon">
+            <Icon name="ic:round-menu" />
+        </a>
+    </div>
+</header>
+<script>
+    const buttons = document.querySelectorAll(".icon");
+
+    buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        });
+    });
+</script>

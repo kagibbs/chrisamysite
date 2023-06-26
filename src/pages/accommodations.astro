@@ -1,0 +1,82 @@
+---
+import Layout from "../components/Layout.astro";
+import TitleBG from "../components/TitleBG.astro";
+---
+
+<style>
+	.container h1 {
+		color: #cd2d5a;
+		text-align: center;
+		font-size: 4em;
+		line-height: 1.2em;
+	}
+
+	.container h2 {
+		text-align: center;
+		text-transform: uppercase;
+		color: #cd2d5a;
+		letter-spacing: 0.1em;
+	}
+	.container .text-center p {
+		font-family: "Merriweather", sans-serif;
+		color: #467ca4;
+		font-size: 0.9em;
+		line-height: 1.9em;
+	}
+	.imgOverlay {
+	}
+
+	.overlayCaption p {
+		color: #ffffff;
+		position: absolute;
+		left: 16%;
+		right: 16%;
+		bottom: 200px;
+		text-transform: uppercase;
+		text-align: center;
+		background-color: rgb(0 0 0 / 50%);
+		font-size: 4.5em;
+		font-family: "Montserrat Variable", sans-serif;
+		font-weight: 100;
+		line-height: 1.5em;
+		padding: 20px;
+	}
+</style>
+
+<Layout title="Tale of the Tape - Chris and Amy Say I Do">
+	<TitleBG title="Lodging" backgroundUrl="/src/images/accomodate_hotel.jpg" />
+	<div class="section titleBGtop">
+		<div class="container">
+			<div class="text-center px-18">
+				<h1 class="mb-5">Bed and Breaking Fast...</h1>
+				<p class="mb-10">
+					We have reserved a block of rooms at the Hampton Inn-Matamoras. There's free hot breakfast and parking, as well as an indoor pool, a 24-hour
+					exercise room and a business center. Rooms can be booked immediately but must be reserved by August 7th, 2017 to receive the block rate.
+				</p>
+			</div>
+			<div class="container max-w-screen-lg mx-auto">
+				<div class="footerImg">
+					<img src="/src/images/lodging.png" alt="Chris and Amy say I Do on September 9th 2017 in Glen Spey New York" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<TitleBG title="Trasportation" backgroundUrl="/src/images/accomodate_bus.jpg" />
+	<div class="section titleBGtop">
+		<div class="container">
+			<div class="text-center px-18">
+				<h1 class="mb-5">Need a ride?</h1>
+				<p class="mb-10">Travel accommodations will be provided to and from Midtown.</p>
+				<p class="mb-20">
+					Help us plan for a charter! If most wedding guests plan to stay in the five boroughs, we want to make transportation to and from the Wedding
+					Venue easy. A private charter bus will pick up wedding guests from Midtown Manhattan and return after the reception.
+				</p>
+			</div>
+
+			<div class="text-center">
+				<h1>The magic already happened!</h1>
+				<p>All you need is a time machine to travel back to a moment where you would have seen a form to fill out</p>
+			</div>
+		</div>
+	</div>
+</Layout>

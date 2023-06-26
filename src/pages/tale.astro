@@ -1,0 +1,116 @@
+---
+import Layout from "../components/Layout.astro";
+import TitleBG from "../components/TitleBG.astro";
+import PicCaption from "../components/PicCaption.astro";
+import { Img, BackgroundPicture, ImageSupportDetection } from "astro-imagetools/components";
+---
+
+<ImageSupportDetection />
+
+<Layout title="Tale of the Tape - Chris and Amy Say I Do">
+	<TitleBG title="And then Chris met Amy..." backgroundUrl="/src/images/story/story1.jpg" />
+	<div class="section titleBGtop">
+		<div class="container max-w-screen-lg mx-auto">
+			<Img src="/src/images/event_banner.png" alt="Join us as Chris and Amy Say I do on September 09, 2017 at Glen Spey, NY" />
+		</div>
+	</div>
+
+	<TitleBG title="It was meant to be" backgroundUrl="/src/images/story/story2.jpg" />
+
+	<div class="section">
+		<div class="container max-w-screen-lg mx-auto">
+			<div class="grid md:grid-cols-2 gap-4 mb-8">
+				<PicCaption
+					picture="/src/images/story/storychris1.jpg"
+					picCaptionTitle="Chris"
+					picCaption="Brooklyn's fiercest ninja who slays numbers and hearts. A hero so legendary, Superman wears pajamas with his logo. Melted instantly when he met his warrior princess. Retired the cape, and found his true strength and purpose."
+					picHeight="490"
+					picWidth="325"
+				/>
+				<PicCaption
+					picPosition="rightCaption"
+					picture="/src/images/story/storyamy1.jpg"
+					picCaptionTitle="Amy"
+					picCaption="The flaxen femme fatale. Destroyer of bubble tea. Sushi slayer. Yankee fan. Animal lover. This Disney princess gave Chris a shot after he passed the Carter test. Hasn't looked back since."
+					picHeight="490"
+					picWidth="325"
+				/>
+			</div>
+
+			<PicCaption
+				picPosition="lgCap"
+				picture="/src/images/story/storychris2.jpg"
+				picCaptionTitle="Can't Lose her if I Marry her"
+				picHeight="316"
+				picWidth="470"
+			/>
+
+			<PicCaption
+				picPosition="lgCap rightCaption"
+				picture="/src/images/story/storyamy2.jpg"
+				picCaptionTitle="All it took was one smile... TOO EASY"
+				picHeight="346"
+				picWidth="470"
+			/>
+
+			<PicCaption
+				picPosition="lgCap"
+				picture="/src/images/story/storychrisamy.jpg"
+				picCaptionTitle="And they lived happily ever after"
+				picHeight="346"
+				picWidth="470"
+				subCaption="Isn't it romantic when both sides come out on top?"
+			/>
+		</div>
+	</div>
+	<TitleBG title="One proposal later..." backgroundUrl="/src/images/story/story3.jpg" />
+
+	<div class="section">
+		<div class="container max-w-screen-lg mx-auto">
+			<div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+				<div class="imgContain">
+					<BackgroundPicture src="/src/images/story/proposal1.jpg">
+						<section class="overlayCaption">
+							<p>Gotta put a ring on it</p>
+						</section>
+					</BackgroundPicture>
+				</div>
+				<div class="imgContain">
+					<BackgroundPicture src="/src/images/story/proposal2.jpg">
+						<section class="overlayCaption">
+							<p>Bet on a life on happiness</p>
+						</section>
+					</BackgroundPicture>
+				</div>
+				<div class="imgContain">
+					<BackgroundPicture src="/src/images/story/proposal3.jpg">
+						<section class="overlayCaption">
+							<p>For a future of memories</p>
+						</section>
+					</BackgroundPicture>
+				</div>
+				<div class="imgContain">
+					<BackgroundPicture src="/src/images/story/proposal4.jpg">
+						<section class="overlayCaption">
+							<p>From head over heels</p>
+						</section>
+					</BackgroundPicture>
+				</div>
+				<div class="imgContain">
+					<BackgroundPicture src="/src/images/story/proposal5.jpg">
+						<section class="overlayCaption">
+							<p>To a new journey</p>
+						</section>
+					</BackgroundPicture>
+				</div>
+				<div class="imgContain">
+					<BackgroundPicture src="/src/images/story/proposal6.jpg">
+						<section class="overlayCaption">
+							<p>With nothing but love</p>
+						</section>
+					</BackgroundPicture>
+				</div>
+			</div>
+		</div>
+	</div>
+</Layout>

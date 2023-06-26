@@ -1,0 +1,115 @@
+---
+import Layout from "../components/Layout.astro";
+import TitleBG from "../components/TitleBG.astro";
+import PicCaption from "../components/PicCaption.astro";
+import { Img } from "astro-imagetools/components";
+---
+
+<style>
+	.container h1 {
+		color: #cd2d5a;
+		text-align: center;
+		font-size: 2.5em;
+		line-height: 1.2em;
+	}
+
+	.container h2 {
+		text-align: center;
+		text-transform: uppercase;
+		color: #cd2d5a;
+		letter-spacing: 0.1em;
+	}
+	.container p {
+		font-family: "Merriweather", sans-serif;
+		color: #467ca4;
+		font-size: 0.9em;
+		line-height: 1.9em;
+	}
+
+	.figCard {
+		text-transform: uppercase;
+		font-size: 1.7em;
+		font-weight: 300;
+		color: #ffffff;
+	}
+
+	@media (min-width: 768px) {
+		.container h1 {
+			font-size: 4em;
+		}
+	}
+</style>
+
+<Layout title="The Main Event - Chris and Amy Say I Do">
+	<TitleBG title="On to the main event" backgroundUrl="/src/images/event/mainevent1.jpg" />
+	<div class="section">
+		<div class="container max-w-screen-lg mx-auto">
+			<div class="grid md:grid-cols-3 gap-8 mb-4">
+				<Img src="/src/images/event/amyevent.jpg" alt="Amy putting her gloves on" />
+				<div>
+					<h1>Ceremony and Reception</h1>
+					<h2 class="mb-4">Glen Spey, NY</h2>
+					<h2>Saturday September 9, 2017 4:00 PM - 10:00 PM</h2>
+				</div>
+				<Img src="/src/images/event/chrisevent.jpg" alt="Chris putting his gloves on" />
+			</div>
+			<div class="grid md:grid-cols-3 gap-10 py-10 my-10 border-b border-slate-400">
+				<div>
+					<p>
+						All that love can make for a hot wedding ceremony in early September, so dress comfortably. Also, consider reasonable shoes as the
+						ceremony will be on an unpaved section of the property.
+					</p>
+				</div>
+				<div class="col-span-2">
+					<PicCaption picture="/src/images/event/attire.png" picCaptionTitle="Cocktail Attire" />
+				</div>
+			</div>
+			<div class="grid md:grid-cols-2 gap-10 py-10 my-10 border-b border-slate-400">
+				<div>
+					<PicCaption picture="/src/images/event/parking.jpg" picCaptionTitle="Parking" />
+				</div>
+				<div>
+					<p>
+						There is no need to worry about not finding the perfect parking spot! There is a large gravel parking lot right in front of the venue
+						with plenty of parking space for everyone.
+					</p>
+				</div>
+			</div>
+			<div class="grid md:grid-cols-2 gap-10 py-10 my-10 border-b border-slate-400">
+				<div>
+					<p>
+						The closest international airport to the venue is Stewart International Airport however flight options can be limited. Another option
+						would be to use one of the three NYC area airports (JFK, LGA or EWR). The venue is about a 1 hour drive from Stewart and 2 hours from
+						NYC.
+					</p>
+				</div>
+				<div>
+					<PicCaption picture="/src/images/event/jfk.jpg" picCaptionTitle="JFK Airport" />
+				</div>
+			</div>
+			<div class="grid md:grid-cols-2 gap-10 py-10 my-10 border-b border-slate-400">
+				<div>
+					<PicCaption picture="/src/images/event/power.png" picCaptionTitle="Photos" />
+				</div>
+				<div>
+					<p>
+						Our ceremony is unplugged - We would like you to be able to truly enjoy our wedding day and feel present in the moment with us. We've
+						hired an amazing photographer to capture the way the wedding looks so that you can experience how it feels. We respectfully ask everyone
+						to turn cameras and mobile phones off until after our first dance. Of course, we would love to share photos with everyone afterwards!
+					</p>
+				</div>
+			</div>
+			<div class="text-center px-18">
+				<h1 class="mt-20 mb-5">Adults Only?</h1>
+				<p class="mb-20">
+					With the exception being children of the bridal party, yes. As much as we luh da kids, we ask that you leave them (12 & under) home for this
+					one. If this poses a problem for you, please let us know as accommodations can be made!
+				</p>
+				<h1 class="mt-20 mb-5">Contact Info</h1>
+				<p>If you have any questions, please don't hesitate to contact Chris and Amy at chrisandamysayido@gmail.com.</p>
+			</div>
+		</div>
+	</div>
+
+	<TitleBG title="We won't say you might regret not showing up... but..." backgroundUrl="/src/images/event/mainevent2.jpg" />
+</Layout>

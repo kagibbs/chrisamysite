@@ -1,37 +1,132 @@
 ---
-import Layout from '../components/Layout.astro';
+// src/pages/swiper.astro
+// import MySwiper from '../components/MySwiper.jsx';
+import "@fontsource-variable/jost";
 ---
 
-<Layout title="Astro Quickstart">
-	<main>
-    <svg id="background" width='1728' height='1235' viewBox="0 0 1728 1235" fill='none' xmlns='http://www.w3.org/2000/svg'><g opacity='0.75' filter='url(#filter0_f_39_143)'><circle cy='1000' r='264' fill='url(#paint0_linear_39_143)'/></g><g opacity='0.65' filter='url(#filter1_f_39_143)'><circle cx='1720' cy='264' r='379' fill='url(#paint1_linear_39_143)'/></g><defs><filter id='filter0_f_39_143' x='-485' y='515' width='970' height='970' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'><feFlood flood-opacity='0' result='BackgroundImageFix'/><feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/><feGaussianBlur stdDeviation='110.5' result='effect1_foregroundBlur_39_143'/></filter><filter id='filter1_f_39_143' x='1120' y='-336' width='1200' height='1200' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'><feFlood flood-opacity='0' result='BackgroundImageFix'/><feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/><feGaussianBlur stdDeviation='110.5' result='effect1_foregroundBlur_39_143'/></filter><linearGradient id='paint0_linear_39_143' x1='196.5' y1='902' x2='-2.55853e-05' y2='1264' gradientUnits='userSpaceOnUse'><stop stop-color="var(--bttm-left-blur-1)"/><stop offset='1' stop-color="var(--bttm-left-blur-2)"/></linearGradient><linearGradient id='paint1_linear_39_143' x1='1720' y1='-115' x2='1720' y2='643' gradientUnits='userSpaceOnUse'><stop stop-color="var(--top-right-blur-1)"/><stop offset='1' stop-color="var(--top-right-blur-2)" /></linearGradient></defs></svg>     
-    <div id="content">
-      <div class="header">
-        <h1>Quickstart Template</h1>
-        <div class="logo">
-          <img src="https://user-images.githubusercontent.com/43764894/223559085-8ff69d2f-4247-427f-a3a6-d2036b00082a.png" alt="Netlify plus Astro banner">
-        </div>
-        <h2>
-          This is a bare-bones Astro project that has everything you need to quickly deploy it to Netlify
-        </h2>
-        <div class="bttns">
-          <a href="https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/astro-quickstart" class="bttn primary">Deploy to Netlify</a>
-          <a href="https://github.com/netlify-templates/astro-quickstart" class="bttn secondary">View Repo</a>
-        </div>
-      </div>
-			<div class="resource-list">
-        <ul>
-          <li>
-            <a href="https://ntl.fyi/38O9wmY">Netlify Blog: Astro posts</a>
-					</li>
-          <li>
-            <a href="https://ntl.fyi/3KHGtyz">Netlify Docs</a>
-          </li>
-          <li>
-            <a href="https://docs.astro.build/en/getting-started/">Astro Docs</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-	</main>
-</Layout>
+<style>
+	html,
+	body {
+		position: relative;
+		height: 100%;
+	}
+
+	body {
+		background: #eee;
+		font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+		font-size: 14px;
+		color: #000;
+		margin: 0;
+		padding: 0;
+	}
+
+	.swiper {
+		width: 100%;
+		height: 100%;
+	}
+
+	.swiper-slide {
+		background-position: center;
+		background-size: cover;
+	}
+
+	.swiper-slide img {
+		display: block;
+		height: 100%;
+		width: auto;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		object-position: 34% 36%;
+		object-fit: cover;
+	}
+	.introOverlay {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 999999;
+		background-color: rgba(55, 55, 55, 0.7);
+		color: #ffffff;
+		display: flex;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		font-family: "Montserrat Variable", sans-serif;
+		text-transform: uppercase;
+	}
+
+	.introOverlay h1 {
+		font-family: "Jost Variable", sans-serif;
+		font-size: 8em;
+		font-weight: 500;
+	}
+
+	.introOverlay a {
+		text-transform: uppercase;
+		border: 2px solid;
+		padding: 1em 1.44em;
+		letter-spacing: 0.2em;
+		transition: background-color 170ms ease-in-out;
+	}
+
+	.introOverlay a:hover {
+		background-color: #ffffff;
+		color: #181818;
+		border-color: transparent;
+	}
+</style>
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/src/images/favicon.svg" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Chris and Amy Say I Do</title>
+	</head>
+	<body>
+		<div class="swiper mySwiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img src="/src/images/intro/intro1.jpg" />
+				</div>
+				<div class="swiper-slide">
+					<img src="/src/images/intro/intro2.jpg" />
+				</div>
+				<div class="swiper-slide">
+					<img src="/src/images/intro/intro3.jpg" />
+				</div>
+				<div class="swiper-slide">
+					<img src="/src/images/intro/intro4.jpg" />
+				</div>
+				<div class="swiper-slide">
+					<img src="/src/images/intro/intro5.jpg" />
+				</div>
+			</div>
+		</div>
+		<div class="introOverlay">
+			<h1>Chris & Amy</h1>
+			<a href="/tale">Welcome</a>
+		</div>
+	</body>
+</html>
+
+<script is:inline src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script>
+	var swiper = new Swiper(".mySwiper", {
+		effect: "fade",
+		speed: 1000,
+		loop: true,
+		autoplay: {
+			delay: 3500,
+		},
+	});
+</script>

@@ -1,0 +1,116 @@
+---
+import Layout from "../components/Layout.astro";
+import TitleBG from "../components/TitleBG.astro";
+import PicCaption from "../components/PicCaption.astro";
+import { Img, BackgroundPicture, ImageSupportDetection } from "astro-imagetools/components";
+---
+
+<style>
+	.container h1 {
+		color: #cd2d5a;
+		text-align: center;
+		font-size: 4em;
+		line-height: 1.2em;
+	}
+
+	.container h2 {
+		text-align: center;
+		text-transform: uppercase;
+		color: #cd2d5a;
+		letter-spacing: 0.1em;
+	}
+	.container .text-center p {
+		font-family: "Merriweather", sans-serif;
+		color: #467ca4;
+		font-size: 0.9em;
+		line-height: 1.9em;
+	}
+
+	.overlayCaption {
+		font-size: 1.6em;
+	}
+
+	@media (min-width: 768px) {
+		.overlayCaption {
+			font-size: 3em;
+		}
+	}
+</style>
+
+<ImageSupportDetection />
+
+<Layout title="Tale of the Tape - Chris and Amy Say I Do">
+	<TitleBG title="After the Bell" backgroundUrl="/src/images/afterbell/chrisamyafterbell.jpg" />
+	<div class="section titleBGtop">
+		<div class="container">
+			<div class="text-center px-18">
+				<h1 class="mt-5 mb-5">So many activities...</h1>
+				<p class="mb-10">
+					The fun doesn't stop with the wedding. Whether you're looking to explore the scenery, or gamble away your life savings, there are exciting
+					adventures that are ready to be enjoyed. Come join us for...
+				</p>
+			</div>
+
+			<div class="imgContain">
+				<BackgroundPicture src="/src/images/afterbell/brunch.jpg">
+					<section class="overlayCaption">
+						<p>Sunday brunch with the newlyweds</p>
+					</section>
+				</BackgroundPicture>
+			</div>
+		</div>
+	</div>
+
+	<div class="section pt-0">
+		<div class="grid md:grid-cols-2 gap-4 mb-8 pb-10 border-b border-slate-400">
+			<div>
+				<PicCaption
+					picPosition="mb-10"
+					picture="/src/images/afterbell/activity-hiking.jpg"
+					picCaptionTitle="Hiking Trails"
+					picCaption="Group hike along the Appalachian Trail."
+				/>
+
+				<PicCaption
+					picPosition="md:mt-56 mb-10"
+					picture="/src/images/afterbell/activity-petting.jpg"
+					picCaptionTitle="Petting Zoo at Breeway Farms"
+					picCaption="Interact with goats, cows, bunny rabbits, miniature ponies, and more!"
+				/>
+
+				<PicCaption
+					picPosition="md:mt-72 mb-10"
+					picture="/src/images/afterbell/activity-drivein.jpg"
+					picCaptionTitle="Warwick Drive-In Movie Theatre"
+					picCaption="Watch a double-feature movie from the comfort of your car."
+				/>
+			</div>
+			<div>
+				<PicCaption
+					picPosition="rightCaption md:mt-36 mb-10"
+					picture="/src/images/afterbell/activity-casino.jpg"
+					picCaptionTitle="Monticello Casino & Raceway"
+					picCaption="40,000 sq feet of slots, electronic table games, and sports betting."
+				/>
+				<PicCaption
+					picPosition="rightCaption md:mt-60 mb-10"
+					picture="/src/images/afterbell/activity-winery.jpg"
+					picCaptionTitle="Warwick Valley Winery and Distillery (with apple picking)"
+					picCaption="Enjoy strolling the orchard with a glass of wine, cider or sangria and taking in some of the most beautiful views the Hudson Valley has to offer."
+				/>
+				<PicCaption
+					picPosition="rightCaption md:mt-52 mb-10"
+					picture="/src/images/afterbell/activity-canoes.jpg"
+					picCaptionTitle="Kittatinny Canoes"
+					picCaption="Outdoor adventures on the beautiful Delaware River - canoeing, kayaking, rafting or tubing available. More daring? Duel racing zipline for the adrenaline junkies."
+				/>
+			</div>
+		</div>
+		<div class="container">
+			<div class="text-center">
+				<h1>The magic already happened!</h1>
+				<p>All you need is a time machine to travel back to a moment where you would have seen a form to fill out</p>
+			</div>
+		</div>
+	</div>
+</Layout>

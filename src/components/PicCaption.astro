@@ -1,0 +1,109 @@
+---
+import { Img } from "astro-imagetools/components";
+
+const { picture, picCaptionTitle, picCaption, picPosition, picHeight, picWidth, subCaption } = Astro.props;
+---
+
+<style>
+	.rightCaption .imgContainer {
+		float: right;
+	}
+
+	.rightCaption .figCard {
+		position: relative;
+	}
+
+	figure {
+		display: flex;
+		flex-direction: row;
+	}
+
+	figure.rightCaption {
+		flex-direction: row-reverse;
+	}
+
+	figure .figTitle {
+		font-size: 1.6em;
+	}
+
+	figure figcaption.mt-3 {
+		margin-top: -0.75rem;
+	}
+
+	.figCard {
+		background-color: #63a2cb;
+		margin: 10px 0;
+		padding: 7%;
+		box-sizing: border-box;
+		color: rgba(255, 255, 255, 0.65);
+		border-radius: 3px;
+		font-size: 0.8em;
+	}
+
+	.lgCap .w-1\/2 {
+		width: 33.333333%;
+	}
+
+	.lgCap .figTitle {
+		font-size: 2em;
+	}
+
+	.lgCap .imgContainer {
+		margin-bottom: 1em;
+		overflow: hidden;
+	}
+
+	.lgCap figcaption.w-1\/2 {
+		width: 66.666667%;
+		margin-left: 0.75rem;
+	}
+
+	.lgCap.rightCaption figcaption.ml-3 {
+		margin-left: 0;
+	}
+
+	.lgCap .figCard {
+		padding: 0 30px;
+		font-weight: 200;
+		color: #773742;
+		background-color: #fffffff3;
+		/* box-shadow: 0.2em 0 0 #fff, -0.2em 0 0 #fff; */
+	}
+
+	@media (min-width: 768px) {
+		.lgCap .figTitle {
+			font-size: 3.9em;
+		}
+
+		figure .figTitle {
+			font-size: 1.6em;
+		}
+
+		figure figcaption.mt-3 {
+			margin-top: 0.75rem;
+		}
+
+		/* figure {
+			flex-direction: row;
+		}
+
+		figure.rightCaption {
+			flex-direction: row-reverse;
+		} */
+	}
+</style>
+
+<figure class={picPosition}>
+	<div class="w-1/2">
+		<div style="width:140%" class="imgContainer">
+			<Img src={picture} alt={picCaptionTitle} width={picWidth} height={picHeight} />
+		</div>
+	</div>
+	<figcaption class="w-1/2 ml-3 mt-3">
+		<div class="figCard">
+			<p class="figTitle">{picCaptionTitle}</p>
+			<p>{picCaption}</p>
+		</div>
+		<p class="float-right mt-5 md:pl-32">{subCaption}</p>
+	</figcaption>
+</figure>
