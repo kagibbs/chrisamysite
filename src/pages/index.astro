@@ -1,6 +1,7 @@
 ---
 // src/pages/swiper.astro
 // import MySwiper from '../components/MySwiper.jsx';
+import { Img } from "astro-imagetools/components";
 import "@fontsource-variable/jost";
 ---
 
@@ -96,19 +97,19 @@ import "@fontsource-variable/jost";
 		<div class="swiper mySwiper">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide">
-					<img src="/src/images/intro/intro1.jpg" />
+					<Img src="/src/images/intro/intro1.jpg" alt="chris and amy" layout="fill" />
 				</div>
 				<div class="swiper-slide">
-					<img src="/src/images/intro/intro2.jpg" />
+					<Img src="/src/images/intro/intro2.jpg" alt="lifetime pinky promise" layout="fill" />
 				</div>
 				<div class="swiper-slide">
-					<img src="/src/images/intro/intro3.jpg" />
+					<Img src="/src/images/intro/intro3.jpg" alt="fight of a lifetime" layout="fill" />
 				</div>
 				<div class="swiper-slide">
-					<img src="/src/images/intro/intro4.jpg" />
+					<Img src="/src/images/intro/intro4.jpg" alt="forever diamond in the snow" layout="fill" />
 				</div>
 				<div class="swiper-slide">
-					<img src="/src/images/intro/intro5.jpg" />
+					<Img src="/src/images/intro/intro5.jpg" alt="walking together forever" layout="fill" />
 				</div>
 			</div>
 		</div>

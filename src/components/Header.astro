@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon";
+import { Picture } from "astro-imagetools/components";
 
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/"
@@ -22,9 +23,12 @@ const currentPath = pathname.slice(1); // remove the first "/"
         justify-content: space-between;
     }
 
-    .logo img {
+    .logo {
         height: 65px;
-        padding: 5px;
+        width: 320px;
+    }
+
+    .logo img {
     }
 
     nav {
@@ -114,7 +118,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
     <div class="headerContainer">
         <div class="logo">
             <a href="/">
-                <img src="/src/images/logo.png" alt="Chris and Amy say I Do" />
+                <Picture src="/src/images/logo.png" alt="Chris and Amy say I Do" />
             </a>
         </div>
         <nav>

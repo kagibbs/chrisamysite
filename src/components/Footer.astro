@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon";
+import { Picture } from "astro-imagetools/components";
 
 const { "aria-label": ariaLabel, id } = Astro.props;
 
@@ -49,7 +50,7 @@ const href = `#${id}`;
     </a>
     <div class="container max-w-screen-lg mx-auto">
         <div class="footerImg">
-            <img src="/src/images/footer_banner.png" alt="Chris and Amy say I Do on September 9th 2017 in Glen Spey New York" />
+            <Picture src="/src/images/footer_banner.png" alt="Chris and Amy say I Do on September 9th 2017 in Glen Spey New York" />
         </div>
     </div>
 </footer>
